@@ -1,0 +1,95 @@
+<div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;">
+    <div class="container p-2">
+      <div class="row">
+        <div class="col-sm-8 col-md-9">
+          <p class="p-2">This website uses cookies so that we can provide you with the best website experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy Policy</u></a>.</p> 
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <a class="i-accept btn btn-primary m-2">I Accept</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    (function($){
+      $('.i-accept').on('click', function() {   
+        if(localStorage.noshow !== '1') {
+          $('#cookie-notice').addClass('d-none');
+           localStorage.noshow='1';
+        }  
+      });
+      if(localStorage.noshow == '1') {
+        $('#cookie-notice').addClass('d-none');
+      };
+    })(jQuery);
+  </script>
+  <div id="loader-wrapper">
+  	<div class="loader"></div>
+  </div>
+  <style>
+    /* For best practice, move CSS below to an external CSS file. */
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg); }
+      100% {
+        transform: rotate(360deg); } }
+    #loader-wrapper {
+      background-color: #FFFFFF;
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      text-align: center; }
+    .loader {
+      width: 40px;
+      height: 40px;
+      border: 5px solid #000000;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      margin-top:calc(50vh - 20px);
+      display: inline-block;
+      box-sizing: border-box;
+      -webkit-animation: rotation 1s linear infinite;
+      animation: rotation 1s linear infinite; }
+  </style>
+<nav class="flex bg-white flex-wrap items-center justify-between p-4">
+    <div class="lg:order-2 w-auto lg:w-1/5 lg:text-center">
+        <a class="text-xl text-gray-800 font-semibold font-heading" href="#">
+            Name here
+        </a>
+    </div>
+    <div class="block lg:hidden">
+        <button class="navbar-burger flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                    Menu
+                </title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z">
+                </path>
+            </svg>
+        </button>
+    </div>
+    <div class="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5">
+        <a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600" href="#">
+            Home
+        </a>
+        <a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600" href="Team/Members.html">
+            Team
+        </a>
+        <a class="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-indigo-600" href="#">
+            Gallery
+        </a>
+    </div>
+    <div class="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
+        <a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600" href="#">
+            Content
+        </a>
+        <a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600" href="#">
+            FAQ
+        </a>
+        <a class="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-indigo-600" href="#">
+            Contact
+        </a>
+    </div>
+  </nav>
+  <br>
